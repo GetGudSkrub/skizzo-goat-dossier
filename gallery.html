@@ -1,0 +1,9 @@
+<h1>Nice Dossier - Screenshots</h1>
+<script>
+fetch('https://api.github.com/repos/getgudskrub/getgudskrub.github.io/contents/skizzo-goat-dossier')
+.then(r=>r.json()).then(files=>{
+  files.filter(f=>f.name.includes('Screenshot')).forEach(f=>{
+    document.write(`<img src="${f.name}" style="width:100%;max-width:800px;margin:20px 0;display:block"><br>`);
+  });
+});
+</script>
